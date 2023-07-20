@@ -98,7 +98,7 @@ def content(message):
 # переадресация сообщения после обработки команды /nextstep
 def forward_message(message):
     bot.forward_message(chat_id, message.from_user.id, message.message_id)
-    bot.bot.send_message(message.from_user.id, "Сообщение отправлено Никите.", reply_markup=markup) 
+    bot.send_message(message.from_user.id, "Сообщение отправлено Никите.", reply_markup=markup) 
 
 # вывод ошибок в случае их возникновения
 while True:
