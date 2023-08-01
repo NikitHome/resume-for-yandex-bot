@@ -1,6 +1,7 @@
 import telebot
 from settings import TOKEN, CHAT_ID
 from telebot import types
+from time import sleep
 
 token = TOKEN
 chat_id = CHAT_ID
@@ -104,6 +105,7 @@ def forward_message(message):
 while True:
     try:
         # запуск бота
-        bot.polling(none_stop=True, interval=1)
+        bot.polling(none_stop=True)
     except Exception as e:
         print(e)
+        sleep(15)
